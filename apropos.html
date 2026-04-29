@@ -4,388 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Lora:ital@0;1&display=swap"
-      />
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Lora:ital@0;1&display=swap"/>
+    <link rel="stylesheet" href="apropos.css">
+      
+  
     <title>à propos</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      :root {
-        --jaune: #e8db1e;
-        --noir: #0d0d0d;
-        --noir-card: #1a1a1a;
-        --blanc: #ffffff;
-        --gris: #cccccc;
-        --bleu: #0609aa;
-        --rouge: #ce1c28;
-      }
-
-      body {
-        font-family: "Montserrat", sans-serif;
-        background-color: var(--noir);
-        color: var(--blanc);
-        overflow-x: hidden;
-      }
-      nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 100;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 18px 48px;
-        background: rgba(10, 10, 20, 0.85);
-        backdrop-filter: blur(12px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-      }
-      .logo span {
-        color: var(--jaune);
-      }
-      .logo {
-        font-size: 40px;
-        font-weight: 900;
-        letter-spacing: -1px;
-        color: var(--blanc);
-      }
-      .liens {
-        display: flex;
-        gap: 32px;
-        list-style: none;
-      }
-
-      .liens a {
-        color: var(--gris);
-        text-decoration: none;
-        font-size: 17px;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-        transition: color 0.3s;
-      }
-
-      .liens a:hover {
-        color: var(--bleu);
-      }
-      
-      .bouton {
-        background: none;
-        color: var(--blanc);
-        border: none;
-        padding: 10px 24px;
-        border-radius: 50px;
-        font-size: 17px;
-        font-weight: 700;
-        cursor: pointer;
-        transition:
-          background 0.3s,
-          transform 0.2s;
-        text-decoration: none;
-      }
-
-      .bouton:hover {
-        background: #0609aa;
-        transform: scale(1.04);
-      }
-
-      .hero {
-        position: relative;
-        height: 100vh;
-        overflow: hidden;
-      }
-
-      .h-background {
-        position: absolute;
-        inset: 0;
-        background-image: url("images/download1.jpg");
-        background-size: cover;
-        background-position: center;
-        animation: zoomIn 10s ease-out forwards;
-      }
-
-      @keyframes zoomIn {
-        from {
-          transform: scale(1.2);
-        }
-        to {
-          transform: scale(1);
-        }
-      }
-
-      .h-frame {
-        position: absolute;
-        top: 12%;
-        left: 5%;
-        right: 5%;
-        bottom: 8%;
-        border: 2px solid var(--rouge);
-        border-radius: 24px;
-        pointer-events: none;
-        animation: fadeInFrame 1.5s ease forwards;
-        opacity: 0;
-      }
-
-      @keyframes fadeInFrame {
-        from { opacity: 0; transform: scale(0.97); }
-        to   { opacity: 1; transform: scale(1); }
-      }
-
-      .h-overlay {
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-          to right,
-          rgba(0, 0, 0, 0.2) 50%,
-          rgba(0, 0, 0, 0.65) 60%,
-          rgba(0, 0, 0, 0.75) 100%
-        );
-      }
-      .h-content h1 {
-        font-size: clamp(3rem, 6vw, 5.5rem);
-        font-weight: 900;
-        line-height: 1.05;
-        margin-bottom: 20px;
-        letter-spacing: -2px;
-      }
-      .h-content p {
-        font-size: 2em;
-        line-height: 1.7;
-        color: rgba(255,255,255,0.85);
-        margin-bottom: 28px;
-        font-family: 'Lora', serif;
-        font-style: italic;
-      }
-
-      .h-content {
-        position: absolute;
-        bottom: 30%;
-        right: 8%;
-        width: 42%;
-        animation: slideUp 1s ease 0.4s forwards;
-        opacity: 0;
-        margin-bottom: 16px;
-      }
-      @keyframes slideUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .link {
-        background: none;
-        color: var(--blanc);
-        padding: 10px 24px;
-        border-radius: 50px;
-        border-style: groove;
-        font-size: 1rem;
-        font-weight: 700;
-        cursor: pointer;
-        transition: border-color 0.3s, color 0.3s;
-        text-decoration: none;
-        border-bottom: 1px solid rgba(255,255,255,0.4);
-      }
-      .link {
-        display: inline-block;
-        margin-top: 30px;
-      }
-      .link:hover {
-        background: #0609aa;
-        transform: scale(1.04);
-      }
-      .content {
-        position: sticky;
-        top: 60px;
-        z-index: 90;
-        background: #181825;
-        border-bottom: 1px solid rgba(255,255,255,0.08);
-        display: flex;
-        gap: 0;
-        padding: 0 48px;
-        scroll-behavior: smooth;
-      }
-
-      .content a {
-        color: var(--gris);
-        text-decoration: none;
-        font-size: 1.2rem;
-        font-weight: 600;
-        padding: 18px 20px;
-        border-bottom: 3px solid transparent;
-        transition: color 0.3s, border-color 0.3s;
-        margin-top: 25px;
-        
-      }
-
-      .content a.active,
-      .content a:hover {
-        color: var(--blanc);
-        border-bottom-color: var(--rouge);
-      }
-      #histoire,
-      #manifeste,
-      #chiffres {
-        scroll-margin-top: 100px; 
-      }
-      
-      .section-title {
-        font-size: clamp(2rem, 4vw, 3rem);
-        font-weight: 900;
-        text-align: center;
-        margin-bottom: 60px;
-        letter-spacing: -1px;
-      }
-
-      .manifeste-section {
-        background: var(--noir);
-        padding: 100px 48px;
-        max-width: 1200px;
-        margin: 0 auto;
-      
-      }
-      .manifeste-card{
-        border: 1px solid rgba(255,255,255,0.08);
-        background: var(--noir-card);
-        position: relative;
-        padding: 68px;
-        border-radius: 50px;
-      }
-      .manifeste-card p {
-        font-size: 1.7rem;
-        line-height: 1.9;
-        color: rgba(255,255,255,0.8);
-        margin-bottom: 20px;
-      }
-      .role {
-        font-size: 30px;
-      }
-
-      .histoire-section {
-        background: #111116;
-        padding: 100px 48px;
-      }
-
-      .histoire-inner{
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-
-      .timeline {
-        position: relative;
-        margin-top: 60px;
-        padding-left: 32px;
-        border-left: 2px solid var(--rouge);
-      }
-      .timeline-item {
-        position: relative;
-        margin-bottom: 48px;
-        opacity: 0;
-        transform: translateX(-20px);
-        animation: fadeLeft 0.6s ease forwards;
-      }
-
-      .timeline-item:nth-child(1) {
-        animation-delay: 0.1s;
-      }
-      .timeline-item:nth-child(2) {
-        animation-delay: 0.3s;
-      }
-      .timeline-item:nth-child(3) {
-        animation-delay: 0.5s;
-      }
-      .timeline-item:nth-child(4) {
-        animation-delay: 0.7s;
-      }
-      .timeline-item:nth-child(5) {
-        animation-delay: 0.9s;
-      }
-      .timeline-item:nth-child(6) {
-        animation-delay: 1.1s;
-      }
-
-      @keyframes fadeLeft {
-        to {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-      .timeline-dot {
-        position: absolute;
-        left: -40px;
-        top: 4px;
-        width: 14px;
-        height: 14px;
-        background: var(--rouge);
-        border-radius: 50%;
-        border: 2px solid var(--noir);
-      }
-      .timeline-date {
-        font-size: 25px;
-        font-weight: 700;
-        color: var(--rouge);
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        margin-bottom: 6px;
-      }
-      .timeline-text {
-        font-size: 20px;
-        line-height: 1.7;
-        color: rgba(255, 255, 255, 0.75);
-      }
-      .chiffres-section {
-        background: var(--noir);
-        padding: 100px 48px;
-      }
-      .chiffres-inner {
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-
-      .chiffres-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 32px;
-        margin-top: 60px;
-      }
-
-      .chiffres-card {
-        background: var(--noir-card);
-        border-radius: 16px;
-        padding: 48px 32px;
-        text-align: center;
-        border: 1px solid rgba(255,255,255,0.06);
-        transition: transform 0.3s, border-color 0.3s;
-      }
-
-      .chiffres-card:hover {
-        transform: translateY(-6px);
-        border-color: var(--rouge);
-      }
-
-      .chiffres-number {
-        font-size: 3.5rem;
-        font-weight: 900;
-        color: var(--rouge);
-        letter-spacing: -2px;
-        display: block;
-      }
-
-      .chiffres-label {
-        font-size: 0.85rem;
-        color: var(--gris);
-        margin-top: 8px;
-        font-weight: 600;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-      }
-    </style>
   </head>
   <body>
     <p> Bonjour papa</p>
@@ -522,46 +145,114 @@
         </div>
       </div>
     </div>
-    <div id="partenaires" class="partenaires-section">
-      <h2 class="section-title">Nos partenaires</h2>
-      <div class="manifeste-card"> 
-        <div class="role">
-          <p></p>
-        </div>
+    <!-- SECTION PARTENAIRES (avant le footer) -->
+<div id="partenaires" class="partenaires-section">
+  <h2 class="section-title">Nos partenaires</h2>
+  <p class="partenaires-subtitle">Ils nous font confiance</p>
+  
+  <div class="carousel-wrapper">
+    <div class="carousel-track">
+      <!-- Partenaire 1 — remplace src et le nom quand tu auras les logos -->
+      <div class="carousel-item">
+        <img src="images/partenaires/logo1.png" alt="Partenaire 1">
+        <span>Partenaire 1</span>
+      </div>
+      <!-- Partenaire 2 -->
+      <div class="carousel-item">
+        <img src="images/partenaires/logo2.png" alt="Partenaire 2">
+        <span>Partenaire 2</span>
+      </div>
+      <!-- Partenaire 3 -->
+      <div class="carousel-item">
+        <img src="images/partenaires/logo3.png" alt="Partenaire 3">
+        <span>Partenaire 3</span>
+      </div>
+      <!-- Partenaire 4 -->
+      <div class="carousel-item">
+        <img src="images/partenaires/logo4.png" alt="Partenaire 4">
+        <span>Partenaire 4</span>
+      </div>
+      <!-- Partenaire 5 -->
+      <div class="carousel-item">
+        <img src="images/partenaires/logo5.png" alt="Partenaire 5">
+        <span>Partenaire 5</span>
+      </div>
+
+      <!-- DUPLIQUER les mêmes pour l'effet infini -->
+      <div class="carousel-item">
+        <img src="images/partenaires/logo1.png" alt="Partenaire 1">
+        <span>Partenaire 1</span>
+      </div>
+      <div class="carousel-item">
+        <img src="images/partenaires/logo2.png" alt="Partenaire 2">
+        <span>Partenaire 2</span>
+      </div>
+      <div class="carousel-item">
+        <img src="images/partenaires/logo3.png" alt="Partenaire 3">
+        <span>Partenaire 3</span>
+      </div>
+      <div class="carousel-item">
+        <img src="images/partenaires/logo4.png" alt="Partenaire 4">
+        <span>Partenaire 4</span>
+      </div>
+      <div class="carousel-item">
+        <img src="images/partenaires/logo5.png" alt="Partenaire 5">
+        <span>Partenaire 5</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Colonne 1 : Logo + texte + réseaux -->
+    <div class="footer-description">
+      <img src="images/Images/GVAS.png" alt="Logo GVAS">
+      <p class="footer-text">
+        Le Groupe Vision d'Aigle Services accompagne les talents vers un avenir meilleur.
+      </p>
+      <div class="footer-social">
+        <a href="" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="" aria-label="X"><i class="fab fa-x-twitter"></i></a>
       </div>
     </div>
 
-    <!-- footer -->
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-description">
-          <h2 class="footer-logo"><span>G.V.A.S</span></h2>
-          <img src="images/Images/GVAS.png">
-          <p class="footer-text">
-           Le Groupe Vision d'Aigle Services accompagne les talents vers un avenir
-            meilleur grâce à la formation, l’innovation et l’excellence.
-          </p>
-        </div>
-
-    <!-- liens ramenant vers la page contact -->
-        <div class="footer-encadre">
-          <h4>Une question?</h4>
-          <p>Notre équipe est disponible pour répondre à toutes vos questions</p>
-          <a href="contacts.php" class="footer-encadre-btn">Contactez-nous</a>
-        </div>
-        
-        <h4>À propos</h4>
-      <!-- les lienss pour aller vers "notre histoire" etc.. -->
-      <ul class="clic">
+    <div class="footer-col">
+      <h4>À propos</h4>
+      <ul>
         <li><a href="apropos.html#histoire">Notre histoire</a></li>
         <li><a href="apropos.html#manifeste">Notre manifeste</a></li>
         <li><a href="apropos.html#chiffres">Chiffres clés</a></li>
         <li><a href="apropos.html#partenaires">Nos partenaires</a></li>
-        <li><a href="apropos.html#p">Témoignage</a></li>
-
       </ul>
-        
-    </footer>
+    </div>
+
+    <div class="footer-col">
+      <h4>Formations</h4>
+      <ul>
+        <li><a href="Formation.php">Nos programmes</a></li>
+        <li><a href="Formation.php#calendrier">Calendrier</a></li>
+        <li><a href="index.php#inscription">Inscription</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-encadre">
+      <h4>Une question ?</h4>
+      <p>Notre équipe est disponible pour répondre à toutes vos questions</p>
+      <a href="contacts.php" class="footer-encadre-btn">Contactez-nous</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 <span>G.V.A.S</span> — Tous droits réservés.</p>
+  </div>
+</footer>
   </body>
 </html>
 <!-- Accueil formation, galerie, contact -->
