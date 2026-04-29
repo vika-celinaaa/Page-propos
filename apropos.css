@@ -35,6 +35,36 @@
      backdrop-filter: blur(12px);
      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
  }
+ /* Burger ne se fera pas voir sur pc et ipad*/
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.burger span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: var(--rouge);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* Burger actif  */
+.burger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+.burger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
 
  .logo span {
      color: var(--jaune);
@@ -536,35 +566,60 @@
  }
 
 
- .footer-social {
+ /*.footer-social a{
      display: flex;
      gap: 10px;
      flex-wrap: wrap;
  }
 
- .footer-social a {
-     width: 36px;
-     height: 36px;
-     border-radius: 50%;
-     border: 1px solid rgba(74, 108, 247, 0.4);
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     color: var(--bleu);
-     font-size: 0.85rem;
-     text-decoration: none;
-     transition: all 0.25s;
- }
-
- .footer-social a:hover {
+ .footer-social a hover {
      background: var(--bleu);
      border-color: var(--bleu);
      color: #fff;
-     transform: translateY(-3px);
      box-shadow: 0 6px 16px rgba(74, 108, 247, 0.35);
+ }*/
+ .social-btn {
+    background-color: #e1e8f5;
+    width: 34px;
+    height: 40px;
+    float: left;
+    border-radius: 54px;
+    margin: 20px ;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 6px 16px rgba(74, 108, 247, 0.35);
  }
-
-
+ .social-btn:hover {
+    width: 160px;
+ }
+ .social-btn:nth-child(1):hover{
+    background-color: #1877F2;
+    color: #fff;
+ }
+ .social-btn:nth-child(2):hover{
+    background-color: #0a66c2;
+    color: #fff;
+ }
+ .social-btn:nth-child(3):hover{
+    background-color: #f41616;
+    color: #fff;
+ }
+ .social-btn:nth-child(4):hover{
+    background: linear-gradient(
+        45deg,
+        #833ab4, 
+        #e1306c,
+        #f77737,
+        #FCAF45
+    );
+    color: #fff;
+ }
+ .social-btn:nth-child(5):hover{
+    background-color: #1c1c1f;
+    color: #fff;
+ }
+ 
  .footer-col h4 {
      font-size: 0.72rem;
      letter-spacing: 0.18em;
@@ -647,13 +702,13 @@
  }
 
  .footer-bottom span {
-     color: var(--jaune);
+     color: var(--jaune)
  }
 
  /* RESPONSIVE */
 
- /* Tablette */
- @media (max-width: 1024px) {
+ 
+ /*@media (max-width: 1024px) { 
      .footer-container {
          grid-template-columns: 1fr 1fr;
          gap: 36px;
@@ -668,7 +723,7 @@
      }
  }
 
- /* Mobile large */
+ 
  @media (max-width: 768px) {
      nav {
          padding: 14px 20px;
@@ -688,7 +743,6 @@
      }
  }
 
- /* Mobile petit */
  @media (max-width: 560px) {
      .footer-container {
          grid-template-columns: 1fr;
@@ -708,6 +762,376 @@
 
      .liens {
          display: none;
-        
      }
- }
+ }*/
+  /* ===== RESPONSIVE ===== */
+
+/* Tablette large (iPad Pro, Surface) */
+@media (max-width: 1024px) {
+  nav {
+    padding: 16px 30px;
+  }
+
+  .h-content {
+    width: 55%;
+    right: 5%;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+
+  .footer-description {
+    grid-column: 1 / -1;
+  }
+
+  .footer-encadre {
+    grid-column: 1 / -1;
+  }
+
+  .manifeste-card {
+    padding: 40px;
+  }
+
+  .manifeste-card p {
+    font-size: 1.3rem;
+  }
+
+  .chiffres-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Tablette (iPad Mini, iPad Air) */
+@media (max-width: 768px) {
+  /* Nav */
+  nav {
+    padding: 14px 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+
+  .liens {
+    gap: 14px;
+  }
+
+  .liens a {
+    font-size: 14px;
+  }
+
+  .bouton {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  /* Hero */
+  .h-content {
+    width: 80%;
+    right: 10%;
+    bottom: 20%;
+  }
+
+  .h-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .h-content p {
+    font-size: 1.2rem;
+  }
+
+  /* Barre de navigation interne */
+  .content {
+    padding: 0 20px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+
+  .content a {
+    font-size: 1rem;
+    padding: 14px 14px;
+    white-space: nowrap;
+    margin-top: 15px;
+  }
+
+  /* Sections */
+  .manifeste-section {
+    padding: 60px 24px;
+  }
+
+  .manifeste-card {
+    padding: 32px 24px;
+    border-radius: 24px;
+  }
+
+  .manifeste-card p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+
+  .histoire-section {
+    padding: 60px 24px;
+  }
+
+  .timeline-date {
+    font-size: 18px;
+  }
+
+  .timeline-text {
+    font-size: 16px;
+  }
+
+  .chiffres-section {
+    padding: 60px 24px;
+  }
+
+  .chiffres-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .chiffres-number {
+    font-size: 2.5rem;
+  }
+
+  /* Partenaires */
+  .partenaires-section {
+    padding: 60px 0;
+  }
+
+  .partenaires-section .section-title,
+  .partenaires-subtitle {
+    padding: 0 24px;
+  }
+
+  /* Footer */
+  .footer-container {
+    padding: 40px 24px 30px;
+    gap: 28px;
+  }
+
+  .footer-text {
+    font-size: 0.9rem;
+  }
+
+  .social-btn {
+    margin: 6px 4px;
+  }
+}
+
+/* Mobile (iPhone XR, iPhone 14...) */
+@media (max-width: 480px) {
+  
+  nav {
+    padding: 12px 16px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .liens {
+    display: none;
+  }
+
+  .bouton {
+    font-size: 13px;
+    padding: 7px 14px;
+  }
+
+  /* Hero */
+  .h-content {
+    width: 90%;
+    right: 5%;
+    left: 5%;
+    bottom: 15%;
+  }
+
+  .h-content h1 {
+    font-size: 2rem;
+    letter-spacing: -1px;
+  }
+
+  .h-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .h-frame {
+    top: 8%;
+    bottom: 5%;
+  }
+
+  /* Barre nav interne */
+  .content {
+    padding: 0 12px;
+    top: 50px;
+  }
+
+  .content a {
+    font-size: 0.85rem;
+    padding: 12px 10px;
+    margin-top: 10px;
+  }
+
+  /* Manifeste */
+  .manifeste-section {
+    padding: 50px 16px;
+  }
+
+  .manifeste-card {
+    padding: 24px 16px;
+    border-radius: 16px;
+  }
+
+  .manifeste-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+  }
+
+  /* Timeline */
+  .histoire-section {
+    padding: 50px 16px;
+  }
+
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .timeline-dot {
+    left: -28px;
+  }
+
+  .timeline-date {
+    font-size: 15px;
+  }
+
+  .timeline-text {
+    font-size: 14px;
+  }
+
+  /* Chiffres */
+  .chiffres-section {
+    padding: 50px 16px;
+  }
+
+  .chiffres-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .chiffres-card {
+    padding: 32px 20px;
+  }
+
+  .chiffres-number {
+    font-size: 2.2rem;
+  }
+
+  /* Carousel */
+  .carousel-item {
+    min-width: 110px;
+    padding: 16px 12px;
+  }
+
+  .carousel-item img {
+    width: 60px;
+    height: 45px;
+  }
+
+  /* Footer */
+  .footer-container {
+    grid-template-columns: 1fr;
+    padding: 32px 16px 24px;
+    gap: 24px;
+  }
+
+  .footer-description {
+    grid-column: auto;
+  }
+
+  .footer-encadre {
+    grid-column: auto;
+  }
+
+  .footer-text {
+    font-size: 0.85rem;
+  }
+
+  .social-btn {
+    margin: 4px 3px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .footer-bottom {
+    padding: 14px 16px;
+    font-size: 0.75rem;
+  }
+}
+
+/* small mobile (iPhone SE) */
+@media (max-width: 375px) {
+  .logo {
+    font-size: 20px;
+  }
+
+  .h-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .h-content p {
+    font-size: 0.9rem;
+  }
+
+  .content a {
+    font-size: 0.78rem;
+    padding: 10px 8px;
+  }
+
+  .manifeste-card p {
+    font-size: 0.88rem;
+  }
+
+  .chiffres-number {
+    font-size: 1.9rem;
+  }
+}
+/* Sur mobile */
+@media (max-width: 480px) {
+  .burger {
+    display: flex;
+  }
+
+  .liens {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: rgba(11, 11, 105, 0.97);
+    flex-direction: column;
+    padding: 20px 24px;
+    gap: 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    z-index: 99;
+  }
+
+  .liens.open {
+    display: flex;
+  }
+
+  .bouton {
+    display: none; /* caché sur très petit écran */
+  }
+}

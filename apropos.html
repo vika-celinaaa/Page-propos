@@ -1,76 +1,85 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Lora:ital@0;1&display=swap"/>
-    <link rel="stylesheet" href="apropos.css">
-      
-  
-    <title>à propos</title>
-  </head>
-  <body>
-    <p> Bonjour papa</p>
-    <nav>
-      <div class="logo"><span>G.V.A.S</span></div>
-      <ul class="liens">
-        <li><a href="index.php">Accueil</a></li>
-        <li><a href="Formation.php">Formations</a></li>
-        <li><a href="Galerie.php">Galerie</a></li>
-        <li><a href="contacts.php">Contacts</a></li>
-      </ul>
-      <!-- <button class="bouton">Nous rejoindre</button> -->
-      <a href="index.php" class="bouton">Nous rejoindre</a>
-    </nav>
 
-    <section class="hero">
-      <div class="h-background"></div>
-      <div class="h-overlay"></div>
-      <div class="h-frame"></div>
-      <div class="h-content">
-        <h1>A propos</h1>
-        <p></p>
-        <p>
-          Nous croyons en un monde où chaque personne a la possibilité de
-          développer ses talents, de valoriser ses compétences et de construire
-          un avenir meilleur grâce à l’accompagnement, à l’innovation et à des
-          opportunités accessibles à tous.
-        </p>
-        <a href="#manifeste" class="link">Découvrez notre histoire</a>
-      </div>
-    </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Lora:ital@0;1&display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="apropos.css">
 
-    <div class="content">
-      <a href="#manifeste" class="active">Manifeste</a>
-      <!-- <a href='#manifestre" class="active" -->
-      <a href="#histoire">Notre histoire</a>
-      <a href="#chiffres">Chiffres clés</a>
-      <a href="#partenaires">Nos partenaires</a>
+
+  <title>à propos</title>
+</head>
+
+<body>
+  <nav>
+    <div class="logo"><span>G.V.A.S</span></div>
+    <button class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="liens" id="menu">
+      <li><a href="index.php">Accueil</a></li>
+      <li><a href="Formation.php">Formations</a></li>
+      <li><a href="Galerie.php">Galerie</a></li>
+      <li><a href="contacts.php">Contacts</a></li>
+    </ul>
+    <!-- <button class="bouton">Nous rejoindre</button> -->
+    <a href="index.php" class="bouton">Nous rejoindre</a>
+  </nav>
+
+  <section class="hero">
+    <div class="h-background"></div>
+    <div class="h-overlay"></div>
+    <div class="h-frame"></div>
+    <div class="h-content">
+      <h1>A propos</h1>
+      <p></p>
+      <p>
+        Nous croyons en un monde où chaque personne a la possibilité de
+        développer ses talents, de valoriser ses compétences et de construire
+        un avenir meilleur grâce à l’accompagnement, à l’innovation et à des
+        opportunités accessibles à tous.
+      </p>
+      <a href="#manifeste" class="link">Découvrez notre histoire</a>
     </div>
+  </section>
 
-    <div id="manifeste" class="manifeste-section">
-      <h2 class="section-title">Notre manifeste</h2>
-      <div class="manifeste-card"> 
-        <div class="role">
-          <p>
+  <div class="content">
+    <a href="#manifeste" class="active">Manifeste</a>
+    <!-- <a href='#manifestre" class="active" -->
+    <a href="#histoire">Notre histoire</a>
+    <a href="#chiffres">Chiffres clés</a>
+    <a href="#partenaires">Nos partenaires</a>
+  </div>
+
+  <div id="manifeste" class="manifeste-section">
+    <h2 class="section-title">Notre manifeste</h2>
+    <div class="manifeste-card">
+      <div class="role">
+        <p>
           Nous nous engageons à aider les talents de demain à révéler tout leur
           potentiel dès aujourd'hui. Nous pensons que la prochaine génération de
           leaders doit bénéficier du soutien, des outils et du cadre nécessaires
           pour prendre son destin en main, développer des compétences utiles
           tout au long de sa vie et contribuer à rendre le monde meilleur.
-          </p>
-          <p>
+        </p>
+        <p>
           Nous les accompagnons à travers un écosystème d'apprentissage unique,
           hybride et centré sur l'humain, qui allie rigueur et formation
           d'excellence.
-          </p>
-        </div>
+        </p>
       </div>
-      
     </div>
-    <div id="histoire" class="histoire-section">
-        <div class="histoire-inner">
+
+  </div>
+  <div id="histoire" class="histoire-section">
+    <div class="histoire-inner">
       <h2 class="section-title">Notre histoire</h2>
       <div class="timeline">
         <div class="timeline-item">
@@ -145,107 +154,150 @@
         </div>
       </div>
     </div>
-<div id="partenaires" class="partenaires-section">
-  <h2 class="section-title">Nos partenaires</h2>
-  <p class="partenaires-subtitle">Ils nous font confiance</p>
-  
-  <div class="carousel-wrapper">
-    <div class="carousel-track">
-      <div class="carousel-item">
-        <img src="" alt="Partenaire 1">
-        <span>Partenaire 1</span>
-      </div>
-      <div class="carousel-item">
-        <img src="" alt="Partenaire 2">
-        <span>Partenaire 2</span>
-      </div>
-      <div class="carousel-item">
-        <img src="" alt="Partenaire 3">
-        <span>Partenaire 3</span>
-      </div>
-      <div class="carousel-item">
-        <img src="" alt="Partenaire 4">
-        <span>Partenaire 4</span>
-      </div>
-      <div class="carousel-item">
-        <img src="" alt="Partenaire 5">
-        <span>Partenaire 5</span>
-      </div>
+    <div id="partenaires" class="partenaires-section">
+      <h2 class="section-title">Nos partenaires</h2>
+      <p class="partenaires-subtitle">Ils nous font confiance</p>
 
-      <div class="carousel-item">
-        <img src="" alt="Partenaire 1">
-        <span>Partenaire 1</span>
-      </div>
-      <div class="carousel-item">
-        <img src="images/partenaires/logo2.png" alt="Partenaire 2">
-        <span>Partenaire 2</span>
-      </div>
-      <div class="carousel-item">
-        <img src="" alt="Partenaire 3">
-        <span>Partenaire 3</span>
-      </div>
-      <div class="carousel-item">
-        <img src="" alt="Partenaire 4">
-        <span>Partenaire 4</span>
-      </div>
-      <div class="carousel-item">
-        <img src="" alt="Partenaire 5">
-        <span>Partenaire 5</span>
-      </div>
-    </div>
-  </div>
-</div>
+      <div class="carousel-wrapper">
+        <div class="carousel-track">
+          <div class="carousel-item">
+            <img src="" alt="Partenaire 1">
+            <span>Partenaire 1</span>
+          </div>
+          <div class="carousel-item">
+            <img src="" alt="Partenaire 2">
+            <span>Partenaire 2</span>
+          </div>
+          <div class="carousel-item">
+            <img src="" alt="Partenaire 3">
+            <span>Partenaire 3</span>
+          </div>
+          <div class="carousel-item">
+            <img src="" alt="Partenaire 4">
+            <span>Partenaire 4</span>
+          </div>
+          <div class="carousel-item">
+            <img src="" alt="Partenaire 5">
+            <span>Partenaire 5</span>
+          </div>
 
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-container">
-
-    <!-- Colonne 1 : Logo + texte + réseaux -->
-    <div class="footer-description">
-      <img src="images/Images/GVAS.png" alt="Logo GVAS">
-      <p class="footer-text">
-        Le Groupe Vision d'Aigle Services accompagne les talents vers un avenir meilleur.
-      </p>
-      <div class="footer-social">
-        <a href="" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-        <a href="" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+          <div class="carousel-item">
+            <img src="" alt="Partenaire 1">
+            <span>Partenaire 1</span>
+          </div>
+          <div class="carousel-item">
+            <img src="" alt="Partenaire 2">
+            <span>Partenaire 2</span>
+          </div>
+          <div class="carousel-item">
+            <img src="" alt="Partenaire 3">
+            <span>Partenaire 3</span>
+          </div>
+          <div class="carousel-item">
+            <img src="" alt="Partenaire 4">
+            <span>Partenaire 4</span>
+          </div>
+          <div class="carousel-item">
+            <img src="" alt="Partenaire 5">
+            <span>Partenaire 5</span>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="footer-col">
-      <h4>À propos</h4>
-      <ul>
-        <li><a href="apropos.html#histoire">Notre histoire</a></li>
-        <li><a href="apropos.html#manifeste">Notre manifeste</a></li>
-        <li><a href="apropos.html#chiffres">Chiffres clés</a></li>
-        <li><a href="apropos.html#partenaires">Nos partenaires</a></li>
-      </ul>
-    </div>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-container">
 
-    <div class="footer-col">
-      <h4>Formations</h4>
-      <ul>
-        <li><a href="Formation.php">Nos programmes</a></li>
-        <li><a href="Formation.php#calendrier">Calendrier</a></li>
-        <li><a href="index.php#inscription">Inscription</a></li>
-      </ul>
-    </div>
+        <!-- Colonne 1 : Logo + texte + réseaux -->
+        <div class="footer-description">
+          <img src="images/Images/GVAS.png" alt="Logo GVAS">
+          <p class="footer-text">
+            Le Groupe Vision d'Aigle Services accompagne les talents vers un avenir meilleur.
+          </p>
+          <div class="footer-social">
+            <div class="social-btn">
+              <div class="social-item">
+                <i class="fa-brands fa-facebook"></i>
+                <span>Facebook</span>
+              </div>
+            </div>
+            <div class="social-btn">
+              <div class="social-item">
+                <i class="fa-brands fa-twitter"></i>
+                <span>twitter</span>
+              </div>
+            </div>
+            <div class="social-btn">
+              <div class="social-item">
+                <i class="fa-brands fa-youtube"></i>
+                <span>youtube</span>
+              </div>
+            </div>
+            <div class="social-btn">
+              <div class="social-item">
+                <i class="fa-brands fa-instagram"></i>
+                <span>instagram</span>
+              </div>
+            </div>
+            <div class="social-btn">
+              <div class="social-item">
+                <i class="fa-brands fa-tiktok"></i>
+                <span>tiktok</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <div class="footer-encadre">
-      <h4>Une question ?</h4>
-      <p>Notre équipe est disponible pour répondre à toutes vos questions</p>
-      <a href="contacts.php" class="footer-encadre-btn">Contactez-nous</a>
-    </div>
+        <div class="footer-col">
+          <h4>À propos</h4>
+          <ul>
+            <li><a href="apropos.html#histoire">Notre histoire</a></li>
+            <li><a href="apropos.html#manifeste">Notre manifeste</a></li>
+            <li><a href="apropos.html#chiffres">Chiffres clés</a></li>
+            <li><a href="apropos.html#partenaires">Nos partenaires</a></li>
+          </ul>
+        </div>
 
-  </div>
+        <div class="footer-col">
+          <h4>Formations</h4>
+          <ul>
+            <li><a href="Formation.php">Nos programmes</a></li>
+            <li><a href="Formation.php#calendrier">Calendrier</a></li>
+            <li><a href="index.php#inscription">Inscription</a></li>
+          </ul>
+        </div>
 
-  <div class="footer-bottom">
-    <p>© 2026 <span>G.V.A.S</span> — Tous droits réservés.</p>
-  </div>
-</footer>
-  </body>
+        <div class="footer-encadre">
+          <h4>Une question ?</h4>
+          <p>Notre équipe est disponible pour répondre à toutes vos questions</p>
+          <a href="contacts.php" class="footer-encadre-btn">Contactez-nous</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 — <span>G.V.A.S</span> — Tous droits réservés.</p>
+      </div>
+    </footer>
+
+    <script>
+      const burger = document.getElementById('burger');
+      const menu = document.getElementById('menu');
+
+      burger.addEventListener('click', () => {
+        burger.classList.toggle('active');
+        menu.classList.toggle('open');
+      });
+
+      menu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          burger.classList.remove('active');
+          menu.classList.remove('open');
+        });
+      });
+    </script>
+</body>
+
 </html>
 <!-- Accueil formation, galerie, contact -->
