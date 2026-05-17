@@ -31,7 +31,7 @@
      align-items: center;
      justify-content: space-between;
      padding: 18px 48px;
-     background: rgba(11, 11, 105, 0.85)5;
+     background: rgba(5, 5, 62, 0.85);
      backdrop-filter: blur(12px);
      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
  }
@@ -108,8 +108,8 @@
      font-weight: 700;
      cursor: pointer;
      transition:
-         background 0.3s,
-         transform 0.2s;
+     background 0.3s,
+     stransform 0.2s;
      text-decoration: none;
  }
 
@@ -176,6 +176,28 @@
              rgba(0, 0, 0, 0.65) 60%,
              rgba(0, 0, 0, 0.75) 100%);
  }
+ .h-content {
+     position: absolute;
+     bottom: 30%;
+     right: 8%;
+     width: 42%;
+     animation: slideUp 1s ease 0.4s forwards;
+     opacity: 0;
+     margin-bottom: 16px;
+ }
+
+ @keyframes slideUp {
+     from {
+         opacity: 0;
+         transform: translateY(30px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
 
  .h-content h1 {
      font-size: clamp(3rem, 6vw, 5.5rem);
@@ -417,6 +439,9 @@
      text-align: center;
      border: 1px solid rgba(255, 255, 255, 0.06);
      transition: transform 0.3s, border-color 0.3s;
+ }
+ .chiffres-grid a {
+  text-decoration: none;
  }
 
  .chiffres-card:hover {
